@@ -13,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
+
 public class Attachments {
 
     @Attachment(value = "{attachName}", type = "image/png")
