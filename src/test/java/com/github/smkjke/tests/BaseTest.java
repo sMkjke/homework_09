@@ -17,13 +17,18 @@ public class BaseTest {
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         Configuration.baseUrl = "https://demoqa.com";
 
-//        Configuration.browserSize = "1920x1080";
-
+        Configuration.browser = System.getProperty("browser");
+        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browserSize = System.getProperty("browserSize");
+        if (System.getProperty("remote") != null) {
+            Configuration.remote = System.getProperty("remote");
+        }
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
     }
+
     @AfterEach
     void addAttachments() {
         Attachments.screenshotAs("Last screenshot");
