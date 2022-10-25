@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class DemoqaPracticeFormTestWithParameters extends BaseTest {
+public class        DemoqaPracticeFormTestWithParameters extends BaseTest {
 
     private final RegistrationFormPage registrationFormPage = new RegistrationFormPage();
 
